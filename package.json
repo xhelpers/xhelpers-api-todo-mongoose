@@ -1,0 +1,33 @@
+{
+  "name": "xhelpers-api-todo-mongoose",
+  "version": "1.0.0",
+  "description": "Sample TODO Mongoose api xhelpers v.3+",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xhelpers/xhelpers-api-todo-mongoose.git"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "dev": "export NODE_ENV=DEV && tsc-watch -p tsconfig.json --onSuccess \"node dist/index.js\"",
+    "start": "export NODE_ENV=PROD && node dist/index.js",
+    "test": "export NODE_ENV=TEST && $(npm bin)/mocha -r ts-node/register --exit --reporter=spec --recursive src/test/**.spec.ts",
+    "tsc": "tsc"
+  },
+  "author": "xhelpers",
+  "license": "ISC",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "dependencies": {
+    "mongoose-lean-virtuals": "^0.9.1",
+    "xhelpers-api": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "ts-node": "^10.7.0",
+    "tsc-watch": "^4.6.2",
+    "typescript": "^4.5.5"
+  }
+}
